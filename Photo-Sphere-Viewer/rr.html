@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://mistic100.github.io/Photo-Sphere-Viewer/dist/Photo-Sphere-Viewer/dist/photo-sphere-viewer.min.css">
+  <script src="http://mistic100.github.io/Photo-Sphere-Viewer/dist/three.js/three.min.js"></script>
+  <script src="http://mistic100.github.io/Photo-Sphere-Viewer/dist/Photo-Sphere-Viewer/dist/photo-sphere-viewer.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<style>
+#photosphere {
+    width: 480px ! important;
+    height: 245px ! important;
+}
+</style>
+</head>
+<body>
+
+<div id="photosphere"></div>
+	<iframe name=frame01 src="/photo/p3.htm" width="100%" height="600" scrolling="no" frameborder="0" ></iframe> </div>
+<!--   <a href="https://www.instantstreetview.com/">
+  https://www.instantstreetview.com/ -->
+
+<a href="/photo/p3.htm" target="frame01">3</a> 
+<a href="/photo/p4.htm" target="frame01">4</a> 
+
+<iframe name=ps001  src="/Photo-Sphere-Viewer/r1.html"  frameborder="0"  width="340" height="260"  style="border:0" ></iframe>
+
+<a href="/Photo-Sphere-Viewer/r1.html" target="frame001">1</a> 
+<a href="/Photo-Sphere-Viewer/r11.html" target="frame001">11</a>   
+  
+<script>
+  var PSV = new PhotoSphereViewer({
+    panorama: 'http://www.sakurailan.com.tw/Photo-Sphere-Viewer/01.jpg',
+    container: document.getElementById('photosphere'),
+    navbar: true,
+    caption: '<b>蘭庭民宿</b>1樓',
+    default_fov: 70,
+  });
+</script>
+
+
+  
+</body>
+</html>
