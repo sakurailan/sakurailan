@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rotating Street View Panorama using Google Maps - TheoryApp.com</title>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+
+<body>
+
+<div id="panorama" style="width: 640px; height: 480px">
+</div>
+
+<script>
+var		pano;
+var		latlng = new google.maps.LatLng(41.403591,2.174361);
+
+var panoOptions = {
+	position: latlng,
+	pov: {
+		heading: 0,
+	    pitch: 0
+	}
+};
+
+pano = new google.maps.StreetViewPanorama(document.getElementById('panorama'), panoOptions);
+
+window.setInterval(function() {
+	var pov = pano.getPov();
+	pov.heading += 0.11;
+	pano.setPov(pov);
+}, 10);
+
+</script>
+</body>
+</html>

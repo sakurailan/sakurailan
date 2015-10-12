@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link href="box.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+   <script type="text/javascript">
+$(document).ready(function(){ 
+$.get("/0064/0064.html",function(data){ //初始將a.html include div#iframe
+$("#iframe").html(data);
+}); 
+
+
+$(function(){
+$('.list-side li').click(function() {
+		// 找出 li 中的超連結 href(#id)
+	var $this = $(this),
+	_clickTab = $this.find('a').attr('href'); // 找到連結a中的href標籤值
+	if("-1"==_clickTab.search("http://")){ //不是http://執行以下
+		$.get(_clickTab,function(data){
+		$("#iframe").html(data);	
+		});
+		return false
+	}
+})
+})
+
+});
+</script>
+</head>
+<body>
+ <div class="BOX"  style="position:relative; z-index:99999;">
+ <div  id="iframe" style="position:absolute; width: 710px; height: 550px; padding-top: 270px; padding-left: 70px; ">
+ </div>
+ <!--
+ <iframe src="demo1.html" width="640" height="480" scrolling="no" frameborder="0"></iframe>   -->
+</div>
+</body>
+</html>

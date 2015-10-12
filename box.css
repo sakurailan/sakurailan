@@ -1,0 +1,24 @@
+@import url("rbox.css");
+
+
+.BOX {
+	width:785px;
+	height:625px;
+	margin:0 auto;
+	background-image:url(player1.png);
+	padding:0 0 0 0;
+	position:relative; z-index:99999;
+}
+.BOX p {
+	font-size:12px;
+	line-height:20px;
+	letter-spacing:1px;
+	padding-bottom:12px;
+}
+.aBOX {
+	width:600px;
+	height:480px;
+	margin:0 auto;
+	padding:70px 40px 10px 0;
+	
+	}

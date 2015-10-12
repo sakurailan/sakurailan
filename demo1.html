@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/acss/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+		
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 28px;
+		color:blue;
+		-moz-background-size: cover;
+		background-size: cover;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container" style="z-index:10;">
+        <div class="swiper-wrapper"> 
+            <div class="swiper-slide" style="background-image:url(http://www.sakurailan.com.tw//P1000933.JPG)">room1</div>
+            <div class="swiper-slide" style="background-image:url(http://www.sakurailan.com.tw//7523.jpg); -moz-background-size: cover;
+		background-size: cover;	">room2</div>
+            <div class="swiper-slide" style="background-image:url(http://www.sakurailan.com.tw//DSC_0001.JPG);-moz-background-size: cover;
+		background-size: cover;	">room3</div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1000/1000/nightlife/3)">room4		</div>
+            <div class="swiper-slide"  style="background-image:url(http://lorempixel.com/1000/1000/nightlife/4)">room 5		</div>
+            <div class="swiper-slide"  style="background-image:url(http://lorempixel.com/1000/1000/nightlife/5)">room 6
+			</div>
+            <div class="swiper-slide"  style="background-image:url(http://lorempixel.com/1000/1000/nightlife/6)">大門 7
+			</div>
+            <div class="swiper-slide"  style="background-image:url(http://lorempixel.com/1000/1000/nightlife/7)">室外 8</div>
+            <div class="swiper-slide"  style="background-image:url(http://lorempixel.com/1000/1000/nightlife/8)">Slide 9</div>
+            <div class="swiper-slide"  style="background-image:url(http://lorempixel.com/1000/1000/nightlife/9)">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="/ajs/swiper.min.js"></script>
+
+    <!-- Initialize Swiper  -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+         slidesPerView: 1,
+        loop: true
+    });
+    </script>
+
+</body>
+</html>
